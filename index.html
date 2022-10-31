@@ -4,25 +4,33 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Async & Defer Attributes</title>
+    <link rel="stylesheet" width="300" href="styles/global.css">
     
   </head>
   <body>
-    <output id="progress">Code Output</output>
+    <header>
+      <h1>Async And Defer Attribute</h1>
+      <output id="progress">...loading</output>
+    </header>
     
-    <p>...content before script...</p>
+     <aside class="before-load">
+      <h2>Content Before Large Script Load</h2>
+      <img src="https://d33wubrfki0l68.cloudfront.net/7bfd02c5ee34f268ffc9f48791c520b8ef117241/78413/img/joeys-authentic-italian.webp" width="300" alt="">
+      <button class="is-interactive">Buy Now</button>
+     </aside>
     
-    <style>
-      button{
-        display:block;
-      }
-    </style>
-    <script src="js/large-1Mb.js" defer></script>
-     <img src="https://d33wubrfki0l68.cloudfront.net/7bfd02c5ee34f268ffc9f48791c520b8ef117241/78413/img/joeys-authentic-italian.webp" width="300" alt="">
-    <!-- This isn't visible until the script loads -->
-    <button>click me</button>
-    <p>...content after script...</p>
+     <script src="js/large-1Mb.js" defer></script>
+   
  
+     <aside class="after-load">
+       <h2>Content After Script</h2>
+       <p>script is not loaded and interactive</p>
+       <p>Browser carries on parsing DOM</p>
+       <!-- This isn't visible until the script loads -->
+       
+      </aside>
+      
   </body>
 </html>
  

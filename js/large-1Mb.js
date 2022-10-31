@@ -3456,6 +3456,6 @@ Phasellus elementum ipsum leo, in vulputate lectus cursus iaculis. Aliquam erat 
 */
 
 document.querySelector('button').addEventListener('click', (e)=>{
-  e.currentTarget.parentElement.style.backgroundColor = "tomato";
+  document.body.style.backgroundColor = "tomato";
  
 })
